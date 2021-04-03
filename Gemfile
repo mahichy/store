@@ -17,6 +17,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 1.2'
 gem "mini_magick"
+gem "minitest"
 
 
 
