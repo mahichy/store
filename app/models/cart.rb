@@ -2,14 +2,20 @@ class Cart
 	attr_reader :items
 
 	def self.build_from_hash hash
-		items = hash["cart"]["items"].map do |item_data|
+		items = if hash["cart"] 
+			then 
+			hash["cart"]["items"].map do |item_data|
 			CartItem.new item_data["product_id"], item_data["quantity"]
+			end
+			else
+			
 		end
+
 		new items
 	end
 
 	def initialize items = []
-		@items = item
+		@items = items
 	end
 	def add_item product_id
 		# item = @items.find { |item| item == product_id }
@@ -26,6 +32,7 @@ class Cart
 		end
 		# @items << CartItem.new(product_id)
 	end
+	
 	def empty?
 		@items.empty?
 	end
