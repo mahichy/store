@@ -18,6 +18,8 @@ gem 'jquery-rails'
 gem 'carrierwave', '~> 1.2'
 gem "mini_magick"
 gem "minitest"
+gem 'devise'
+gem 'country_select', '~> 4.0'
 
 
 

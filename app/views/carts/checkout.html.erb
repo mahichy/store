@@ -1,0 +1,19 @@
+<h1>Checkout</h1>
+<h2>You have the following items:</h2>
+
+<ul>
+	<% @cart.items.each do |item| %>
+		<li><b><%= item.quantity %></b>
+			  <%= item.product.name %>
+			  <%= item.total_price%></li>
+		<% end -%>
+</ul>
+
+<p><%= number_to_currency @cart.total_price %></p>
+
+<%= form_for @order_form, url: orders_path |f| %>
+	<p></p>
+
+
+
+<% end -%>
