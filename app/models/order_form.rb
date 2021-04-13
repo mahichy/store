@@ -40,7 +40,7 @@ class OrderForm
 	end
 
 	def set_password_for_user
-		user.password = Digest::SHA1.hexdigest(user.email + Time.now.to_s)(0..8)
+		user.password = Digest::SHA1.hexdigest(user.email + Time.now.to_s)[0..8]
 	end
 
 end
