@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
 	private
 
 	def notify_user
-		@order_form.user.send_reset_password_instractions
+		@order_form.user.send_reset_password_instructions
 		OrderMailer.order_confirmation(@order_form.order).deliver
 	end
 
